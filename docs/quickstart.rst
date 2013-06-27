@@ -1,4 +1,3 @@
-
 Quickstart
 ==========
 
@@ -50,6 +49,12 @@ pass a `dict`_ to *insert*. Note that you don't need to create the columns
    table.insert(dict(name='Jane Doe', age=37, gender='female'))
 
 .. _dict: http://docs.python.org/2/library/stdtypes.html#dict
+
+If you've got a lot of data to insert, using *insert_many* is easy and quicker::
+
+   people = [{'name':'John Doe', age=46},
+             {'name':'Jane Doe', age=37, gender='female'}]
+   table.insert_many(people)
 
 Updating existing entries is easy, too::
 
